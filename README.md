@@ -5,6 +5,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 * Link doc
     * https://nextjs.org/docs/
     * https://nextjs.org/docs/api-reference/next/link
+    * ultimo video visto: https://cursos.alura.com.br/course/next-js-iniciando-framework/task/99982
 
 ```bash
     npm run dev
