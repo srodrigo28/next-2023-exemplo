@@ -14,7 +14,7 @@
     "esModuleInterop": true,
     // "module": "CommonJS",
     // "module": "esnext",
-    "module": "CommonJS",
+    "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
