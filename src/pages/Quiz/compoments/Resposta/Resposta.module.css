@@ -1,6 +1,26 @@
-.resposata{
+.resposta{
     display: flex;
+    margin: 20px;
+
+}
+
+.conteudoResposta{
     
+}
+
+.frente, .verso{
+    display: flex;
+    height: 100%;
+    width: 500px;
+    
+}
+
+.frente{
+    align-items: center;
+    border-radius: 12px;
+    padding: 15px;
+    color: #000;
+    background-color: white;
 }
 
 .letra{
@@ -13,4 +33,11 @@
 
     font-size: 1.3rem;
     border-radius: 50%;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.valor{
+    font-size: 1.3rem;
+    font-weight: bold;
 }

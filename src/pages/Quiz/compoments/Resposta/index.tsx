@@ -11,7 +11,8 @@ export default function Resposta(props: RespostaPros) {
     const resposta = props.valor
     return (
         <div className={styles.resposta}>
-            <div className={styles.counteudo}>
+            <div className={styles.conteudoResposta}>
+                
                 <div className={styles.frente}>
                     <div className={styles.letra}
                          style={{ backgroundColor: props.corFundoLetra }} >
@@ -21,6 +22,7 @@ export default function Resposta(props: RespostaPros) {
                         {resposta.valor}
                     </div>
                 </div>
+                
                 <div className={styles.verso}>
 
                 </div>
