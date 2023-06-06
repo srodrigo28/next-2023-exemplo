@@ -1,3 +1,4 @@
+import { embaralhar } from "../components/functions/arrays";
 import RespostaModel from "./resposta";
 
 export default class QuestaoModal{
@@ -21,6 +22,16 @@ export default class QuestaoModal{
             if(resposta.revelada) return true
         }
         return false
+    }
+
+    embaralharRespostas() {
+        let respostasEmbaralhadas = embaralhar(this.#respostas)
+        return new QuestaoModal(
+            this.#id,
+            this.#enunciado,
+            respostasEmbaralhadas,
+            this.#acertou
+        )
     }
 
     paraObjeto() {

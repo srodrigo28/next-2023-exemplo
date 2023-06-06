@@ -30,7 +30,7 @@ export default class RespostaModel {
     paraObjeto() {
         return {
             valor: this.#valor,
-            certa: this.#revelada,
+            certa: this.#certa,
             revelada: this.#revelada
         }
     }

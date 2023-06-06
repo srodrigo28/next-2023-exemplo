@@ -1,3 +1,5 @@
+/*** Função criada para fazer o sorteio ou embaralhar! */
+
 export function embaralhar(elementos: any[]): any[] {
     return elementos
         .map(valor => ({ valor, aleatorio: Math.random() }))
