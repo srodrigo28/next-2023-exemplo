@@ -1,5 +1,6 @@
 import QuestaoModal from "../../../model/questao";
 import Enunciado from "../compoments/Enunciado/Enunciado";
+import Resposta from "../compoments/Resposta";
 
 import styles from './Questao.module.css'
 
@@ -9,10 +10,23 @@ interface QuestaoProps{
 export default function Questao( props: QuestaoProps ) {
     const questao = props.valor
 
+    function rederizarResposta() {
+        return questao.respostas.map((resposta, i) => {
+            return (
+                <Resposta
+                    valor={resposta}
+                    indice={i}
+                    letra="A"
+                    corLetra="#F2C866"
+            />
+            )
+        })
+    }
+
     return (
         <div className={styles.questao}>
-            <h1>Questão Inicial</h1>
             <Enunciado texto={questao.enunciado} />
+            {rederizarResposta()}
         </div>
     )
 }
