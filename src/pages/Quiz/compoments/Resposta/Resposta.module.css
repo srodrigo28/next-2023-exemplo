@@ -1,18 +1,17 @@
 .resposta{
     display: flex;
     margin: 20px;
-
+    
 }
 
 .conteudoResposta{
-    
+    display: inline; /** Não funcionando */
 }
-
 .frente, .verso{
     display: flex;
     height: 100%;
-    width: 500px;
-    
+    width: 500px;  
+    cursor: pointer; 
 }
 
 .frente{
@@ -31,6 +30,7 @@
     align-items: center;
     justify-content: center;
 
+    color: #fff;
     font-size: 1.3rem;
     border-radius: 50%;
     font-weight: bold;

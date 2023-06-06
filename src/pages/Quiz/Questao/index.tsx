@@ -4,8 +4,16 @@ import Resposta from "../compoments/Resposta";
 
 import styles from './Questao.module.css'
 
+const letra = [
+    { valor: 'A', cor: '#F2C866' },
+    { valor: 'B', cor: '#F266BA' },
+    { valor: 'C', cor: '#85D4F2' },
+    { valor: 'D', cor: '#BCE596' },
+]
+
 interface QuestaoProps{
     valor: QuestaoModal
+    resposataFornecida: (indice: number) => void
 }
 
 export default function Questao( props: QuestaoProps ) {
@@ -18,8 +26,9 @@ export default function Questao( props: QuestaoProps ) {
                     key={i}
                     valor={resposta}
                     indice={i}
-                    letra="A"
-                    corFundoLetra="#F2C866"
+                    letra={letra[i].valor}
+                    corFundoLetra={letra[i].cor}
+                    respostaFornecida={props.resposataFornecida}
             />
             )
         })
