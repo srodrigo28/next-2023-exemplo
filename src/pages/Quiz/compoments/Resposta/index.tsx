@@ -5,7 +5,7 @@ interface RespostaPros{
     valor: RespostaModel
     indice: number
     letra: string
-    corLetra: string
+    corFundoLetra: string
 }
 export default function Resposta(props: RespostaPros) {
     const resposta = props.valor
@@ -13,7 +13,8 @@ export default function Resposta(props: RespostaPros) {
         <div className={styles.resposta}>
             <div className={styles.counteudo}>
                 <div className={styles.frente}>
-                    <div className="letra">
+                    <div className="letra"
+                        style={{ backgroundColor: props.corFundoLetra }} >
                         {props.letra}
                     </div>
                     <div className="valor">
