@@ -13,11 +13,11 @@ export default function Resposta(props: RespostaPros) {
         <div className={styles.resposta}>
             <div className={styles.counteudo}>
                 <div className={styles.frente}>
-                    <div className="letra"
-                        style={{ backgroundColor: props.corFundoLetra }} >
+                    <div className={styles.letra}
+                         style={{ backgroundColor: props.corFundoLetra }} >
                         {props.letra}
                     </div>
-                    <div className="valor">
+                    <div className={styles.valor}>
                         {resposta.valor}
                     </div>
                 </div>
