@@ -17,7 +17,21 @@ export default class RespostaModel {
         return new RespostaModel(valor, false)
     }
     
-    get valor() { return this.#valor }
-    get certa() { return this.#certa }
-    get revelada() { return this.#revelada }
+    get valor() {
+        return this.#valor
+    }
+    get certa() {
+        return this.#certa
+    }
+    get revelada() {
+        return this.#revelada
+    }
+
+    paraObjeto() {
+        return {
+            valor: this.#valor,
+            certa: this.#revelada,
+            revelada: this.#revelada
+        }
+    }
 }
