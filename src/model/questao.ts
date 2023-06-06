@@ -24,7 +24,17 @@ export default class QuestaoModal{
         return false
     }
 
-    embaralharRespostas() {
+    responderCom(indice: number): QuestaoModal{
+        const acertou = this.#respostas[indice]?.certa
+        const respostas = this.#respostas.map((resposta, i) => {
+            const respostaSelecionada = indice === i
+            const deveRevelar = respostaSelecionada || resposta.certa
+            return deveRevelar ? resposta.revelar() : resposta
+        })
+        return new QuestaoModal(this.id, this.enunciado, respostas, acertou)
+    }
+
+    embaralharRespostas(): QuestaoModal {
         let respostasEmbaralhadas = embaralhar(this.#respostas)
         return new QuestaoModal(
             this.#id,
@@ -39,6 +49,7 @@ export default class QuestaoModal{
             id: this.#id,
             enunciado: this.#enunciado,
             respostas: this.#respostas.map(resp => resp.paraObjeto()),
+            respondida: this.respondida,
             acertou: this.#acertou
         }
     }
