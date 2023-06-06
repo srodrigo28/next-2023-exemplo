@@ -48,9 +48,9 @@ export default class QuestaoModal{
         return {
             id: this.#id,
             enunciado: this.#enunciado,
-            respostas: this.#respostas.map(resp => resp.paraObjeto()),
             respondida: this.respondida,
-            acertou: this.#acertou
+            acertou: this.#acertou,
+            respostas: this.#respostas.map(resp => resp.paraObjeto()),
         }
     }
 
