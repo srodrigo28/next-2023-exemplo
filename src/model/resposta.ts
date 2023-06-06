@@ -8,6 +8,14 @@ export default class RespostaModel {
         this.#certa = certa
         this.#revelada = revelada
     }
+
+    static certa(valor: string) {
+        return new RespostaModel(valor, true)
+    }
+    
+    static errada(valor: string) {
+        return new RespostaModel(valor, false)
+    }
     
     get valor() { return this.#valor }
     get certa() { return this.#certa }
